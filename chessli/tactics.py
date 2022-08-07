@@ -30,7 +30,7 @@ class PuzzleFetcherMixin:
         return puzzle_activity
 
     def read_lichess_puzzle_database(self) -> pd.DataFrame:
-        column_names = "PuzzleId,FEN,Moves,Rating,RatingDeviation,Popularity,NbPlays,Themes,GameUrl".split(
+        column_names = "PuzzleId,FEN,Moves,Rating,RatingDeviation,Popularity,NbPlays,Themes,GameUrl,OpeningFamily,OpeningVariation".split(
             ","
         )
         if self.config.db_source == PuzzleDBSource.remote:
